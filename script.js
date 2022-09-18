@@ -129,6 +129,8 @@ function handleTask(e) {
 const checkAll = document.getElementById("checkAllTask");
 checkAll.addEventListener("click", handleCheckAll);
 function handleCheckAll() {
+const checkBoxes = document.querySelectorAll("#lists input ");
+
   for (let checks of checkBoxes) {
     checks.checked = true;
   }
