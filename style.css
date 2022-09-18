@@ -4,6 +4,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #dce6e6;
 }
 #header{
     text-align: center;
@@ -16,55 +17,135 @@ body{
     justify-content: center;
 }
 #container{
-    width: 60%;
+    width: 30rem;
     background-color: #b2af8b;
-    border-radius: 4px;
-}
-form{
-    width: 90%;
-    display: flex;
-    margin: auto;
-    gap: 1rem;
-    margin-top: 3rem;
-    flex-flow: row-reverse wrap;
-
-}
-form button{
-    font-size: 1rem;
-    padding:0.4rem 1rem;
-    background-color: #72694b;
-    color: white;
-    cursor: pointer;
-    border: none;
     border-radius: 6px;
 }
-form button:hover{
-    background-color: #9e967f;
+form{
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-flow: row-reverse wrap;
+    padding: 1rem;
+    position: relative;
+
 }
+
+
 form input{
     width: 100%;
     background: none;
-    padding: 0.5rem;
-    font-size: 1rem;
+    padding: 1.4rem 3.4rem;
+    font-size: 1.3rem;
     outline: none;
-    border: 2px solid #974737;
+    border: 2px solid #681909;
+    box-sizing: border-box;
+    border-radius: 8px;
+
     
 }
+#notes{
+    width: 2.5rem;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+#button{
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+
+}
+#add{
+    width:1.8rem ;
+}
+form input:focus{
+    background: black;
+    color: white;
+}
+#compeltedTaskDetail{
+    display: flex;
+    justify-content: space-between;
+    padding:0rem 1rem 0.4rem 1rem;
+    width: 90%;
+    border-bottom: thin solid #681909;
+    margin: auto;
+    color: #080022;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+#compeltedTaskDetail span{
+    cursor: pointer;
+}
+#checkAllTask img{
+    width: 1.3rem;
+
+}
+#checkAllTask{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
 #lists li{
+    width: 90%;
     list-style: none;
     display: flex;
-    gap: 2rem;
     align-items: center;
+    justify-content: space-between;
     margin-top: 1rem;
-    color: #974737;
     font-family: 'Poppins', sans-serif;
     transition: all 0.6s ease-in-out;
+    color: #080022;
+    position: relative;
 }
 #lists li img{
-    width: 0.8rem;
+    width: 1rem;
     cursor: pointer;
+    display: none;
+}
+#lists li >div{
+    display: flex;
+    gap: 2rem;
+}
+#lists li:hover :last-child{
+    display: block;
 }
 .completed{
     text-decoration: line-through;
     font-size:1.1rem ;
+}
+#taskStates{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-top: thin solid #681909;
+    width: 90%;
+    margin: auto;
+    color: #080022;
+    font-family: 'Poppins', sans-serif;
+
+}
+#taskStates span{
+    cursor: pointer;
+}
+#taskClassification{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+#slider{
+    position: absolute;
+    width: 1.3rem;
+    height: 0.15rem;
+    background-color: black;
+    bottom: -9%;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+
 }
