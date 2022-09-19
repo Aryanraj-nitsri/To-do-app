@@ -41,6 +41,8 @@ function handleClick(e) {
 }
 function handleCheck(e) {
   e.target.parentElement.parentElement.classList.toggle("completed");
+  allLists = document.querySelectorAll("#lists li");
+
 }
 function handleFocus() {
   if (button.style.display === "none" || !button.style.display) {
@@ -75,8 +77,8 @@ function handleTask(e) {
     const completedTasks = document.querySelectorAll(".completed");
     for (let list of allLists) {
       if (
-        list.getAttribute("class") !== "completed" ||
-        list.getAttribute("class") === "newlist"
+        list.getAttribute("class") === null ||
+        list.getAttribute("class") === "newlist"|| list.getAttribute("class")===""
       ) {
         list.style.display = "flex";
       }
@@ -97,6 +99,7 @@ function handleTask(e) {
       if (
         list.getAttribute("class") === "completed" ||
         list.getAttribute("class") === "newlist completed"
+        
       ) {
         list.style.display = "flex";
       }
