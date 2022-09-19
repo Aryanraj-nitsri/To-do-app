@@ -21,6 +21,7 @@ body{
     background-color: #b2af8b;
     border-radius: 6px;
 }
+/* form section  */
 form{
     gap: 1rem;
     margin-top: 1rem;
@@ -67,6 +68,7 @@ form input:focus{
     background: black;
     color: white;
 }
+/* styling of complete all task button and clear all  */
 #compeltedTaskDetail{
     display: flex;
     justify-content: space-between;
@@ -91,6 +93,7 @@ form input:focus{
     gap: 1rem;
     align-items: center;
 }
+/* unordered list section  */
 
 #lists li{
     width: 90%;
@@ -116,10 +119,12 @@ form input:focus{
 #lists li:hover :last-child{
     display: block;
 }
+
 .completed{
     text-decoration: line-through;
     font-size:1.1rem ;
 }
+/* footer section  */
 #taskStates{
     display: flex;
     justify-content: space-between;
