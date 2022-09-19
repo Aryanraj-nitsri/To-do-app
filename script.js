@@ -43,7 +43,6 @@ function handleCheck(e) {
   e.target.parentElement.parentElement.classList.toggle("completed");
 }
 function handleFocus() {
-  console.log(button.style.display);
   if (button.style.display === "none" || !button.style.display) {
     button.style.display = "block";
   } else {
@@ -76,7 +75,7 @@ function handleTask(e) {
     const completedTasks = document.querySelectorAll(".completed");
     for (let list of allLists) {
       if (
-        list.getAttribute("class") === null ||
+        list.getAttribute("class") !== "completed" ||
         list.getAttribute("class") === "newlist"
       ) {
         list.style.display = "flex";
